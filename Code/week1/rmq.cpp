@@ -4,21 +4,19 @@ using namespace std;
 
 const int MAX = 1000000;
 int a[MAX],n;
-vector<vector<int>> b;
+int b[30][MAX];
 
 void preprocess() {
-    int log_n = log2(n) + 1;
-    b.resize(log_n, vector<int>(n, -1));
     for(int j = 0; (1<<j) <= n; j++) {
         for(int i = 0; i<n;i++) {
             b[j][i] = -1; // Khởi tạo toàn bộ giá trị bằng -1 
         }
     }
     for(int i = 0;i<n;i++) {
-        b[0][i] = a[i]; // Gán giá trị của mảng a vào mảng b
+        b[0][i] = i; // Gán giá trị cho hàng 0
     }
-    for(int j = 0 ; (1<<j) <=n ;j++) {
-        for(int i =0;i<i+(1<<j);i++) {
+    for(int j = 1 ; (1<<j) <=n ;j++) {
+        for(int i =0;i+(1<<j)-1<n;i++) {
             if(a[b[j-1][i]] <= a[b[j-1][i+(1<<(j-1))]]) { 
                 b[j][i] = b[j-1][i];
             }
@@ -41,6 +39,7 @@ int rmq(int i, int j) {
 }
 
 int main () {
+    ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin >> n;
     for(int i=0;i<n;i++) {
         cin >> a[i];
@@ -52,7 +51,7 @@ int main () {
     for(int i =0;i<m;i++) {
         int x,y;
         scanf("%d %d",&x,&y);
-        ans += rmq(x,y);
+        ans += a[rmq(x,y)];
     }
     cout << ans;
     return 0;
