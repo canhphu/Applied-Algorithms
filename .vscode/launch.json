@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/admin/OneDrive - Hanoi University of Science and Technology/Documents/Applied-Algorithms/Code/week1",
+      "program": "c:/Users/admin/OneDrive - Hanoi University of Science and Technology/Documents/Applied-Algorithms/Code/week1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
