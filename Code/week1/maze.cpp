@@ -11,9 +11,7 @@ int d[maxN][maxN];
 // d[MaxN][MaxN] lưu độ dài đường đi từ ô xuất phát
 int dx[] = {1,0,-1,0};
 int dy[] = {0,1,0,-1};
-
 queue <ii> qe; //luư các ô lân cận sẽ được xét
-
 int solve() {
     qe.push(ii(r,c)); d[r][c]=0; a[r][c] = 1;
     while(!qe.empty()) {
@@ -31,7 +29,6 @@ int solve() {
     }
     return -1;
 }
-
 int main () {
     ios_base::sync_with_stdio(0);cin.tie(0); cout.tie(0);
     cin >> m >> n >> r >> c;

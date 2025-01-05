@@ -11,14 +11,11 @@ int Cmin = 1000000;
 int res = 1e9;
 
 bool check( int v){
-
     if( visited[v] ) return false; //kiem tra xem v da duoc chon chua
     if( v <= n && load == K) return false; // kiem tra xem load da vuot qua K chua
     if( v > n && visited[v - n] == 0 ) return false; // kiem tra xem co xe nao chua duoc chon chua
-
     return true;
 }
-
 void Try( int k){
     for( int v = 1; v <= 2*n ;v++){
         if( check(v)){
@@ -44,7 +41,6 @@ void Try( int k){
         }
     }
 }
-
 int main(){
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     cin >> n >> K;

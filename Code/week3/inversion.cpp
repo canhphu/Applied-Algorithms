@@ -28,13 +28,11 @@ void connect(int l, int mi, int r) {
         i++;
         k++;
     }
-
     while(j<=r) {
         b[k] = a[j];
         j++;
         k++;
     }
-
     for(int i = 1;i<=r;i++) {
         a[i] = b[i];
     }

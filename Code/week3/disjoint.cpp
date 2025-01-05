@@ -2,7 +2,6 @@
 
 using namespace std;
 int n;
-pair<int,int> last;
 vector<pair<int,int>> vv;
 int cnt = 0;
 int kt = -1;

@@ -4,8 +4,8 @@ using namespace std;
 int n,m;
 vector<int> kh[50]; //nhung giao vien co the day khoa hoc i
 vector<int> gv[50]; //nhung khoa hoc giao vien i dang day
-int a[50][50];
-int load[50];
+int a[50][50]; 
+int load[50]; //so luong khoa hoc ma giao vien i dang day
 
 int res=1000;
 bool check(int g, int k) {

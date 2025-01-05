@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAX = 1000000;
+const int MAX = 1000001;
 int a[MAX],n;
 int b[30][MAX];
 
